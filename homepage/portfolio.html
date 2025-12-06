@@ -1,0 +1,100 @@
+<!--CMPS3141-HCI - AS4
+Name: Tysha Daniels
+Collaborators:
+Date: Dec.12.25
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio — CMPS3141</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="shortcut icon"
+      href="images/creme_icon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="theme-creme">
+    <nav aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+      <a href="portfolio.html" aria-current="page">Portfolio</a>
+      <a href="writeup.html">Writeup</a>
+    </nav>
+    <header class="page-hero">
+      <span class="badge">HCI • AS3</span>
+      <h1>My Class Apps Portfolio</h1>
+      <p class="lede">Quick links to the small apps I’ve built so far.</p>
+    </header>
+    <!-- Grid #1: page layout (main + sidebar) -->
+    <main class="wrap page-grid">
+      <section aria-labelledby="apps-heading">
+        <h2 id="apps-heading" class="filter-title">Apps</h2>
+
+        <!-- Grid #2: portfolio cards -->
+        <div class="portfolio-grid wide">
+          <!-- Expense App -->
+          <article class="y2k-card portfolio-card">
+            <figure class="media">
+              <img
+                src="images/expense.jpeg"
+                alt="Screenshot of my Expense App showing entries and totals"
+              />
+              <figcaption>
+                Expense App — track entries, categories, and totals
+              </figcaption>
+            </figure>
+            <h3>Expense App</h3>
+            <p>
+              Simple expense tracker with add/remove, category filters, and
+              running totals. Built to practice form handling, list rendering,
+              and basic state updates.
+            </p>
+            <div class="actions">
+              <a
+                class="y2k-button"
+                href="../expenses/index.html"
+                target="_blank"
+                >Open App</a
+              >
+            </div>
+          </article>
+
+          <!-- Grade Calculator -->
+          <article class="y2k-card portfolio-card">
+            <figure class="media">
+              <img
+                src="images/grade.jpeg"
+                alt="Screenshot of my Grade Calculator with inputs and projected grade"
+              />
+              <figcaption>
+                Grade Calculator — projected final grade with category weights
+              </figcaption>
+            </figure>
+            <h3>Grade Calculator</h3>
+            <p>
+              Weighted grade projection tool. Supports homework cap (max 5),
+              renormalized weights for missing items, and a quick “what-if”
+              scenario.
+            </p>
+            <div class="actions">
+              <a
+                class="y2k-button"
+                href="../grade-calculator/index.html"
+                target="_blank"
+                >Open App</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="wrap" style="margin-top: 16px">
+      <hr />
+      <p style="opacity: 0.8">© 2025 • CMPS3141 • Tysha Daniels</p>
+    </footer>
+  </body>
+</html>
