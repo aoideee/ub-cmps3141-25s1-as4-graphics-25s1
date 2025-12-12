@@ -1,14 +1,265 @@
 <!--CMPS3141-HCI - AS4
-Name:
+Name: Tysha Daniels
 Collaborators:
 Date: Dec.12.25
  -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Exercise 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 4 - Learnability Evaluation</title>
+    <style>
+      :root {
+        --brand-brown: #553f2e;
+        --brand-green: #b3cc1f;
+        --brand-beige: #f7ecdf;
+      }
+
+      @font-face {
+        font-family: "Museo";
+        src: local("Museo"), local("Museo Sans"),
+          url("https://fonts.cdnfonts.com/s/15886/Museo300-Regular.woff")
+            format("woff");
+      }
+
+      body {
+        font-family: "Museo", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--brand-beige);
+        color: var(--brand-brown);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        background-color: white;
+        padding: 40px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 5px solid var(--brand-green);
+      }
+
+      header::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background: var(--brand-brown);
+        border-top-left-radius: 50% 100%;
+        border-top-right-radius: 50% 100%;
+        opacity: 0.1;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2.5em;
+        color: var(--brand-brown);
+      }
+
+      .subtitle {
+        color: var(--brand-green);
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      main {
+        flex: 1;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(85, 63, 46, 0.1);
+        margin-bottom: 40px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(
+          circle at top right,
+          var(--brand-beige) 0%,
+          transparent 70%
+        );
+        opacity: 0.5;
+      }
+
+      h2 {
+        color: var(--brand-brown);
+        border-bottom: 2px solid var(--brand-green);
+        padding-bottom: 10px;
+        display: inline-block;
+        margin-top: 0;
+      }
+
+      h3 {
+        color: var(--brand-green);
+        margin-top: 30px;
+      }
+
+      p {
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .pain-point {
+        background-color: #fff8f0;
+        border-left: 4px solid var(--brand-brown);
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .pain-point h4 {
+        margin-top: 0;
+        color: var(--brand-brown);
+      }
+
+      .video-container {
+        margin: 15px 0;
+        background: #000;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      video {
+        width: 100%;
+        display: block;
+      }
+
+      .meta-info {
+        display: flex;
+        gap: 15px;
+        font-size: 0.9em;
+        color: #777;
+        margin-bottom: 10px;
+      }
+
+      .tag {
+        background: var(--brand-green);
+        color: white;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-weight: bold;
+      }
+
+      footer {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: var(--brand-brown);
+        color: #dccbbd;
+        border-top-left-radius: 50% 30px;
+        border-top-right-radius: 50% 30px;
+        margin-top: 40px;
+        font-size: 0.9em;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Evaluating Learnability</h1>
+      <div class="subtitle">Affinity Designer vs Figma</div>
+    </header>
+
+    <main>
+      <div class="card">
+        <h2>Tool Selection & Comparison</h2>
+        <p>
+          I used <strong>Affinity Designer</strong> for the
+          <strong>Business Card, Letterhead, and Envelope</strong>. While Adobe
+          Illustrator was a consideration, region restrictions made it
+          inaccessible. Affinity Designer was an attractive alternative,
+          especially since it's now owned by Canva, and they made it free.
+        </p>
+        <p>
+          Comparing it to my limited experience with Figma, I found Figma's UI
+          slightly more intuitive ("easier to get the hang of"). Affinity
+          Designer feels more like the "industry standard" for robust vector
+          work; it has a steeper learning curve but feels fine once you
+          acclimatize.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Learnability Issues</h2>
+        <p>
+          I encountered two main hurdles that stalled my progress for about
+          10-15 minutes each.
+        </p>
+
+        <div class="pain-point">
+          <div class="meta-info">
+            <span class="tag">Issue 1</span>
+            <span>Time lost: ~15 mins</span>
+          </div>
+          <h4>Changing the Canvas Background Color</h4>
+          <p>
+            It wasn't immediately obvious how to change the document background
+            color compared to tools like Figma where it's usually a top-level
+            setting. I had to search for the solution.
+          </p>
+          <div class="video-container">
+            <video controls>
+              <source src="videos/1-canvas-color.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <div class="pain-point">
+          <div class="meta-info">
+            <span class="tag">Issue 2</span>
+            <span>Time lost: ~10 mins</span>
+          </div>
+          <h4>Adding a Custom Font</h4>
+          <p>
+            I needed to use the 'Museo' font for the brand identity. Finding
+            where to import or manage fonts within Affinity wasn't
+            straightforward and required external help (asked Gemini).
+          </p>
+          <div class="video-container">
+            <video controls>
+              <source src="videos/2-custom-font.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <h3>Conclusion</h3>
+        <p>
+          To be honest, <strong>I did not have any other issues</strong> with
+          Affinity Designer besides the two stated above. The application itself
+          was stable and responsive.
+        </p>
+        <p>
+          The main factor that took up my time was not the tool's learnability,
+          but rather the <strong>creative process</strong> itself...iterating on
+          designs, choosing colors, and refining shapes. Once I overcame the
+          initial hurdles of the canvas and fonts, the tool didn't get in my
+          way.
+        </p>
+      </div>
+    </main>
+
+    <footer>&copy; 2025 Tysha Daniels - HCI Assignment</footer>
+  </body>
 </html>
